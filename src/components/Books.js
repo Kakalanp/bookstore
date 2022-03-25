@@ -1,5 +1,6 @@
 import React from 'react';
 import Book from './Book';
+import Form from './Form';
 
 export default function Books() {
   const books = [
@@ -33,11 +34,7 @@ export default function Books() {
           <Book key={book.id} title={book.title} author={book.author} category={book.category} />
         ))}
       </div>
-      <form>
-        <input type="text" />
-        <input type="text" />
-        <button type="submit" label="submit" />
-      </form>
+      <Form />
     </section>
   );
 }
