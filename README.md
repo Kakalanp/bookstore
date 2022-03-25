@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Book store
+# Book store 📚
 
- This is a page that lets you add books to your reading list and track their progress, you can also find them by category.
+ This is a page that lets you add books to your reading list and track their progress, you can also find them by category. 📖
 
 ## Built With 🔍
 
@@ -18,7 +18,7 @@
 
 ## Live page:
 
-[Here](https://kakalanp.github.io/Math-Magicians/)
+[Here](https://kakalanp.github.io/bookstore/)
 
 ## Contributing: 🤝
 
