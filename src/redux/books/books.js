@@ -1,4 +1,4 @@
-import { ADD, REMOVE } from '../../actionTypes';
+import { ADD_BOOK, REMOVE_BOOK } from '../../actionTypes';
 
 // Helper function
 function newBook(action) {
@@ -13,9 +13,9 @@ function deleteBook(id, state = []) {
 // Reducers
 export default function booksReducer(state = [], action) {
   switch (action.type) {
-    case ADD:
+    case ADD_BOOK:
       return [...state, newBook(action)];
-    case REMOVE:
+    case REMOVE_BOOK:
       return deleteBook(action.id, state);
     default:
       return state;
@@ -24,9 +24,9 @@ export default function booksReducer(state = [], action) {
 
 // Action creators
 export function addBook(title, author) {
-  return { type: ADD, title, author };
+  return { type: ADD_BOOK, title, author };
 }
 
 export function removeBook(id) {
-  return { type: REMOVE, id };
+  return { type: REMOVE_BOOK, id };
 }

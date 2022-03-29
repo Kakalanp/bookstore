@@ -1,9 +1,9 @@
-import { CHECK } from '../../actionTypes';
+import { STATUS_CATEGORIES } from '../../actionTypes';
 
 // Reducer
 export default function categoriesReducer(state = [], action) {
   switch (action.type) {
-    case CHECK:
+    case STATUS_CATEGORIES:
       return 'Under construction';
     default:
       return state;
@@ -12,5 +12,5 @@ export default function categoriesReducer(state = [], action) {
 
 // Action creators
 export function check() {
-  return { type: CHECK };
+  return { type: STATUS_CATEGORIES };
 }

@@ -1,5 +1,5 @@
-const ADD = 'ADD';
-const REMOVE = 'REMOVE';
-const CHECK = 'CHECK';
+const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
+const STATUS_CATEGORIES = 'bookstore/categories/CHECK_STATUS';
 
-export { ADD, REMOVE, CHECK };
+export { ADD_BOOK, REMOVE_BOOK, STATUS_CATEGORIES };
