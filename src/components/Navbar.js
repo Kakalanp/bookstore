@@ -6,10 +6,12 @@ export default function Navbar() {
     {
       path: '',
       name: 'Books',
+      id: 1,
     },
     {
       path: 'Categories',
       name: 'Categories',
+      id: 2,
     },
   ];
 
@@ -20,7 +22,7 @@ export default function Navbar() {
         <ul>
           {links.map((link) => (
             <li key={link.id}>
-              <Link to={`/${link.path}`} exact>{link.name}</Link>
+              <Link to={`/${link.path}`}>{link.name}</Link>
             </li>
           ))}
         </ul>
