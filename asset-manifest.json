@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/bookstore/static/js/main.5ec9b1de.js",
+    "main.js": "/bookstore/static/js/main.b9623a7e.js",
     "index.html": "/bookstore/index.html",
-    "main.5ec9b1de.js.map": "/bookstore/static/js/main.5ec9b1de.js.map"
+    "main.b9623a7e.js.map": "/bookstore/static/js/main.b9623a7e.js.map"
   },
   "entrypoints": [
-    "static/js/main.5ec9b1de.js"
+    "static/js/main.b9623a7e.js"
   ]
 }
