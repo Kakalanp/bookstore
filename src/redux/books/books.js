@@ -3,7 +3,9 @@ import { ADD_BOOK, REMOVE_BOOK } from '../../actionTypes';
 // Helper function
 function newBook(action) {
   const { title, author } = action;
-  return { title, author, id: Math.floor(Math.random() * 999999) };
+  return {
+    title, author, id: Math.floor(Math.random() * 999999), category: null,
+  };
 }
 
 function deleteBook(id, state = []) {
@@ -23,10 +25,10 @@ export default function booksReducer(state = [], action) {
 }
 
 // Action creators
-export function addBook(title, author) {
+export function addBook({ title, author }) {
   return { type: ADD_BOOK, title, author };
 }
 
-export function removeBook(id) {
+export function removeBook({ id }) {
   return { type: REMOVE_BOOK, id };
 }
