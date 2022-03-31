@@ -1,10 +1,15 @@
 import { ADD_BOOK, REMOVE_BOOK, FETCH_BOOKS } from '../../actionTypes';
 
-// Helper function
+// Global variable that counts the number of books
+let bookCount = 0;
+
+// Helper functions
 function newBook(action) {
-  const { title, author } = action;
+  const {
+    title, author, id, category,
+  } = action;
   return {
-    title, author, id: Math.floor(Math.random() * 999999), category: null,
+    title, author, id, category,
   };
 }
 
@@ -18,11 +23,13 @@ export default function booksReducer(state = [], action) {
   switch (action.type) {
     case ADD_BOOK:
       return [...state, newBook(action)];
+
     case REMOVE_BOOK:
       return deleteBook(action.id, state);
+
     case FETCH_BOOKS:
-      // {"item1":[{"category":"Fiction","author":"John Smith","title":"The Great Gatsby"}]}
       Object.entries(action.data).forEach(([key, value]) => {
+        bookCount += 1;
         bookList.push({
           id: key,
           title: value[0].title,
@@ -30,25 +37,51 @@ export default function booksReducer(state = [], action) {
           category: value[0].category,
         });
       });
+      // The array bookList is not ordered, I sorted it by id
+      bookList.sort((a, b) => {
+        if (a.id < b.id) { return -1; }
+        if (a.id > b.id) { return 1; }
+        return 0;
+      });
       return bookList;
+
     default:
       return state;
   }
 }
 
 // Action creators
-export function addBook({ title, author }) {
-  return { type: ADD_BOOK, title, author };
-}
+export const addBook = ({ title, author, category }) => async (dispatch) => {
+  const id = `item${bookCount + 1}`;
+  bookCount += 1;
 
-export function removeBook({ id }) {
-  return { type: REMOVE_BOOK, id };
-}
+  await fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/VpD4DoliMdQTvZBLcSES/books', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+    },
+    body: JSON.stringify({
+      item_id: id,
+      title,
+      author,
+      category,
+    }),
+  })
+    .then(() => dispatch({
+      type: ADD_BOOK, title, author, id, category,
+    }));
+};
+
+export const removeBook = ({ id }) => async (dispatch) => {
+  await fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/VpD4DoliMdQTvZBLcSES/books/${id}`, {
+    method: 'DELETE',
+  })
+    .then(() => dispatch({ type: REMOVE_BOOK, id }));
+};
 
 export const fetchBooks = () => async (dispatch) => {
   await fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/VpD4DoliMdQTvZBLcSES/books')
     .then((response) => response.json())
     .then((data) => dispatch({ type: FETCH_BOOKS, data }));
 };
-
-// VpD4DoliMdQTvZBLcSES

@@ -23,13 +23,9 @@ export default function Book({
   );
 }
 
-Book.defaultProps = {
-  category: null,
-};
-
 Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  category: PropTypes.string,
+  category: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
 };
