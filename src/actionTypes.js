@@ -1,5 +1,9 @@
-const ADD_BOOK = 'bookstore/books/ADD_BOOK';
-const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
-const STATUS_CATEGORIES = 'bookstore/categories/CHECK_STATUS';
+const ADD_BOOK = 'ADD_BOOK';
+const REMOVE_BOOK = 'REMOVE_BOOK';
+const STATUS_CATEGORIES = 'CHECK_STATUS';
+const FETCH_BOOKS = 'FETCH_BOOKS';
 
-export { ADD_BOOK, REMOVE_BOOK, STATUS_CATEGORIES };
+export {
+  ADD_BOOK, REMOVE_BOOK,
+  STATUS_CATEGORIES, FETCH_BOOKS,
+};
