@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.js": "/bookstore/static/js/main.b9623a7e.js",
+    "main.css": "/bookstore/static/css/main.d149134a.css",
+    "main.js": "/bookstore/static/js/main.d85450dd.js",
     "index.html": "/bookstore/index.html",
-    "main.b9623a7e.js.map": "/bookstore/static/js/main.b9623a7e.js.map"
+    "main.d149134a.css.map": "/bookstore/static/css/main.d149134a.css.map",
+    "main.d85450dd.js.map": "/bookstore/static/js/main.d85450dd.js.map"
   },
   "entrypoints": [
-    "static/js/main.b9623a7e.js"
+    "static/css/main.d149134a.css",
+    "static/js/main.d85450dd.js"
   ]
 }
