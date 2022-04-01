@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: serif;
+  font-weight: bold;
+}
+
+body {
+  background-color: #f7f7f7;
+
+  /*
+  background-color: #140300;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  */
+}
+
+.content {
+  padding: 180px 60px 0;
+  height: calc(100vh - 380px);
+  overflow: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  background-color: #0290ff;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  padding: 12px;
+}

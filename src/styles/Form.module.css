@@ -1,0 +1,43 @@
+form {
+  z-index: 2;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  bottom: 0;
+  min-height: 200px;
+  padding: 0 60px;
+  width: calc(100% - 120px);
+  box-shadow: -1px -1px 5px 1px rgba(0, 0, 0, 0.2);
+  background-color: #f7f7f7;
+
+  /*
+  box-shadow: -1px -1px 65px 25px rgba(0, 0, 0, 0.9);
+  background-color: #401a00;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  */
+}
+
+.formTitle {
+  color: #888;
+}
+
+.formInputs {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+input {
+  min-width: 80px;
+  width: 25%;
+  height: 25px;
+  padding: 10px;
+  border: none;
+  text-align: center;
+  outline: none;
+}
+
+.btnAdd {
+  width: 180px;
+}
