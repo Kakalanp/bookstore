@@ -12,7 +12,7 @@ export default function Books() {
   return (
     <section>
 
-      <div>
+      <div className="content">
         {books.map((book) => (
           <Book
             key={book.id}

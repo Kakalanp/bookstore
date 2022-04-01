@@ -1,1 +1,88 @@
-/* stylelint-disable no-empty-source */
+.book {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  margin: 15px 0;
+  padding: 25px;
+  border: #e8e8e8;
+}
+
+.category {
+  color: rgba(18, 18, 18, 0.5);
+}
+
+.author {
+  color: #4386bf;
+  font-weight: 100;
+  font-size: 0.8rem;
+}
+
+.removeBook {
+  background-color: white;
+  color: #4386bf;
+  padding: 0;
+  padding-top: 20px;
+}
+
+.rightInfo {
+  display: flex;
+}
+
+.completion {
+  display: flex;
+  align-items: center;
+}
+
+.completionNumber {
+  padding: 0 30px;
+}
+
+.chapter {
+  color: #898989;
+}
+
+.currentChapter {
+  color: rgba(18, 18, 18, 0.5);
+}
+
+.Circle {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Circle__progress {
+  position: relative;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Circle__progress::before {
+  content: "";
+  position: absolute;
+  height: 84%;
+  width: 84%;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.Book_numberCompleted {
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black_two);
+}
+
+.Book_completedText {
+  opacity: 0.5;
+  font-size: 0.875rem;
+}

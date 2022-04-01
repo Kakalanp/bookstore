@@ -1,0 +1,32 @@
+nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: calc(100% - 120px);
+  min-height: 100px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 60px;
+  text-align: center;
+  box-shadow: -1px -1px 5px 1px rgba(0, 0, 0, 0.2);
+  background-color: white;
+
+  /*
+  box-shadow: -1px -1px 65px 25px rgba(0, 0, 0, 0.9);
+  background-color: #401a00;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  */
+}
+
+.title {
+  color: #0290ff;
+  font-size: 3rem;
+  font-family: monospace, serif;
+}
+
+.linksList {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  max-width: 250px;
+}
